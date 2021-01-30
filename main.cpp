@@ -7,10 +7,9 @@ int main(int argc, char* argv[])
     string fileName = argv[1];
     ifstream input(fileName);
     cout << fileName;
-    string out = "whoops";
+    char out[input.gcount()];
     cout << out;
-    out.assign((istreambuf_iterator<char>(input)),
-        (istreambuf_iterator<char>()));
+    input.read(out, input.gcount());
     cout << out;
     return 0;
 }
