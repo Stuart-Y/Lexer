@@ -8,6 +8,6 @@ int main(int argc, char* argv[])
     ifstream input(fileName);
     string out;
     input >> out;
-    cout << fileName;
+    cout << out;
     return 0;
 }
