@@ -15,18 +15,18 @@ int main(int argc, char* argv[])
     if (input.fail())
     {
         cerr << "File Read Error" << endl;
-        //exit(1);
+        exit(1);
     }
-    //else
-    //{
+    else
+    {
         for (int i = 0; !input.eof(); i++)
         {
             input >> read;
-            cout << read;
+            cout << read << "\n";
             file = file + read;
         }
-        cout << file << endl;
-    //}
+        cout << file << "\n";
+    }
     input.close();
     return 0;
 }
