@@ -19,7 +19,7 @@ int main(int argc, char* argv[])
     }
     else
     {
-        for (int i = 0; !input.eof(); i++)
+        while (!input.eof())
         {
             input >> read;
             cout << read << "\n";
