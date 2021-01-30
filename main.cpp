@@ -2,9 +2,10 @@
 #include <fstream>
 #include<string>
 using namespace std;
-int main()
+int main(int argc, char* argv[])
 {
-    ifstream input("in10.txt");
+    string fileName = argv[1];
+    ifstream input(fileName);
     string out;
     input >> out;
     cout << out;
