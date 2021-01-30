@@ -10,6 +10,6 @@ int main(int argc, char* argv[])
     char out[input.gcount()];
     cout << out;
     input.read(out, input.gcount());
-    cout << out;
+    cout << out[1]+out[2]+out[3];
     return 0;
 }
