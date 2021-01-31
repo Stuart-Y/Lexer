@@ -13,7 +13,7 @@ private:
 	vector<Automaton*> automata;
 
 public:
-	Lexer::Lexer()
+	Lexer()
 	{
 		//tokens = new vector<Token*>();
 		//automata = new vector<Automaton*>();
