@@ -22,7 +22,11 @@ int main(int argc, char* argv[])
         while (!input.eof())
         {
             input >> read;
-            file = file + read + '\n';
+            if (input.peek() != EOF)
+            {
+                file = file + read += input.get();
+            }
+            file = file + read;
         }
         cout << file << '\n';
     }
