@@ -22,7 +22,6 @@ int main(int argc, char* argv[])
         while (!input.eof())
         {
             input >> read;
-            cout << read << "\n";
             file = file + read;
         }
         cout << file << "\n";

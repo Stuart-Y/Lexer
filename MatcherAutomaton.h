@@ -1,5 +1,4 @@
 #pragma once
-#include<string>
 #include "Automaton.h"
 class MatcherAutomaton :
     public Automaton
