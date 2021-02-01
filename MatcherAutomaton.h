@@ -45,17 +45,18 @@ public:
 	int Start(string input, int lineNumber)
 	{
 		maxLines = lineNumber;
-		for (unsigned int i = 0; i < actual.length(); i++)
+		if (input.length() >= actual.length())
 		{
-			if (input[i] != actual[i])
+			for (unsigned int i = 0; i < actual.length(); i++)
 			{
-				return 0;
+				if (input[i] != actual[i])
+				{
+					return 0;
+				}
 			}
-			else
-			{
-				return actual.length();
-			}
+			return actual.length();
 		}
+		return 0;
 	}
 
 	int newLinesRead() const {

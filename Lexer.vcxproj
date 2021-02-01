@@ -77,16 +77,20 @@
   <ItemGroup>
     <ClCompile Include="Automaton.cpp" />
     <ClCompile Include="CommentAutomaton.cpp" />
+    <ClCompile Include="IDAutomaton.cpp" />
     <ClCompile Include="Lexer.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MatcherAutomaton.cpp" />
+    <ClCompile Include="StringAutomaton.cpp" />
     <ClCompile Include="Token.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Automaton.h" />
     <ClInclude Include="CommentAutomaton.h" />
+    <ClInclude Include="IDAutomaton.h" />
     <ClInclude Include="Lexer.h" />
     <ClInclude Include="MatcherAutomaton.h" />
+    <ClInclude Include="StringAutomaton.h" />
     <ClInclude Include="Token.h" />
   </ItemGroup>
   <ItemDefinitionGroup />
