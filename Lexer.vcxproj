@@ -78,11 +78,13 @@
     <ClCompile Include="Automaton.cpp" />
     <ClCompile Include="Lexer.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MatcherAutomaton.cpp" />
     <ClCompile Include="Token.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Automaton.h" />
     <ClInclude Include="Lexer.h" />
+    <ClInclude Include="MatcherAutomaton.h" />
     <ClInclude Include="Token.h" />
   </ItemGroup>
   <ItemDefinitionGroup />

@@ -9,7 +9,7 @@ enum TokenType {COMMA, PERIOD, Q_MARK, LEFT_PAREN, RIGHT_PAREN,
 class Token
 {
 private:
-	string value;
+	string input;
 	int lineNumber;
 	TokenType type;
 	string tokenTypeToString(TokenType token)
@@ -38,5 +38,10 @@ private:
 		cout << "TokenType Error: Type not found";
 	}
 public:
+	Token(TokenType type, string input, int lineNumber) {
+		this->type = type;
+		this->input = input;
+		this->lineNumber = lineNumber;
+	}
 };
 
