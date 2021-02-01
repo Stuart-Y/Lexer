@@ -19,7 +19,7 @@ public:
             cout << "ERROR: Comment Automaton Improperly Requested";
             return 0;
         }
-        else if (input[0] = '#')
+        else if ((input[0] = '#'))
         {
             element = "#";
             for (unsigned int i = 1; input[i] != '\n' && i < input.length(); i++)
