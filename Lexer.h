@@ -15,8 +15,9 @@ private:
 public:
 	Lexer()
 	{
-		//tokens = new vector<Token*>();
-		//automata = new vector<Automaton*>();
+		/*vector<Token*> token();
+		tokens = token;
+		automata = new vector<Automaton*>();*/
 	}
 };
 

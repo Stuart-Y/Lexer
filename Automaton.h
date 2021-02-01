@@ -1,16 +1,20 @@
 #pragma once
 #include <string>
+#include <cctype>
 #include "Token.h"
 
 using namespace std;
 
 class Automaton
 {
-private:
+protected:
 	int readCount = 0;
 	int newLines = 0;
 	TokenType type;
 public:
+	Automaton() {
+		type = UNDEFINED;
+	}
 	Automaton(TokenType type)
 	{
 		this->type = type;
