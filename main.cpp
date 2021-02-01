@@ -26,7 +26,10 @@ int main(int argc, char* argv[])
             {
                 file = file + read += input.get();
             }
-            file = file + read;
+            else 
+            {
+                file = file + read += EOF;
+            }
         }
         cout << file << '\n';
     }
