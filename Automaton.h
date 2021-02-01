@@ -8,8 +8,8 @@ using namespace std;
 class Automaton
 {
 protected:
-	int readCount = 0;
-	int newLines = 0;
+	int maxReadCount = 0;
+	int maxLines = 0;
 	TokenType type;
 public:
 	Automaton() {
@@ -28,7 +28,7 @@ public:
 	}
 
 	virtual int NewLinesRead() const {
-		return	newLines;
+		return	maxLines;
 	}
 };
 

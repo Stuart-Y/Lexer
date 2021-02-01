@@ -76,6 +76,7 @@
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
     <ClCompile Include="Automaton.cpp" />
+    <ClCompile Include="CommentAutomaton.cpp" />
     <ClCompile Include="Lexer.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MatcherAutomaton.cpp" />
@@ -83,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Automaton.h" />
+    <ClInclude Include="CommentAutomaton.h" />
     <ClInclude Include="Lexer.h" />
     <ClInclude Include="MatcherAutomaton.h" />
     <ClInclude Include="Token.h" />

@@ -41,5 +41,25 @@ public:
 			actual = ""; break;
 		}
     }
+
+	int Start(string input, int lineNumber)
+	{
+		maxLines = lineNumber;
+		for (unsigned int i = 0; i < actual.length(); i++)
+		{
+			if (input[i] != actual[i])
+			{
+				return 0;
+			}
+			else
+			{
+				return actual.length();
+			}
+		}
+	}
+
+	int newLinesRead() const {
+		return 0;
+	}
 };
 
