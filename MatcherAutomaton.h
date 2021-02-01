@@ -23,9 +23,22 @@ public:
 		case SCHEMES: actual = "Schemes"; break;
 		case FACTS: actual = "Facts"; break;
 		case QUERIES: actual = "Queries"; break;
+		case ID: 
+			cout << "ERROR: Matcher Automaton Improperly Requested";
+			actual = ""; break;
+		case STRING:
+			cout << "ERROR: Matcher Automaton Improperly Requested";
+			actual = ""; break;
+		case COMMENT:
+			cout << "ERROR: Matcher Automaton Improperly Requested";
+			actual = ""; break;
+		case UNDEFINED:
+			cout << "ERROR: Matcher Automaton Improperly Requested";
+			actual = ""; break;
+		case ENDFILE:
+			cout << "ERROR: Matcher Automaton Improperly Requested";
+			actual = ""; break;
 		}
-		cout << "ERROR: Matcher Automaton Improperly Requested";
-		actual = "";
     }
 };
 

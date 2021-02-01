@@ -53,24 +53,5 @@ public:
 		out = tokenTypeToString(type) + input + to_string(lineNumber);
 		return out;
 	}
-	string tokenString(TokenType identify)
-	{
-		switch (identify) {
-		case COMMA: return ","; break;
-		case PERIOD: return "."; break;
-		case Q_MARK: return "?"; break;
-		case LEFT_PAREN: return "("; break;
-		case RIGHT_PAREN: return ")"; break;
-		case COLON: return ":"; break;
-		case COLON_DASH: return ":-"; break;
-		case MULTIPLY: return "*"; break;
-		case ADD: return "+"; break;
-		case SCHEMES: return "Schemes"; break;
-		case FACTS: return "Facts"; break;
-		case QUERIES: return "Queries"; break;
-		}
-		cout << "ERROR: Matcher Automaton Improperly Requested";
-		return "";
-	}
 };
 
