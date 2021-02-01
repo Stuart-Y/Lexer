@@ -22,6 +22,7 @@ public:
 		case ADD: actual = "+"; break;
 		case SCHEMES: actual = "Schemes"; break;
 		case FACTS: actual = "Facts"; break;
+		case RULES: actual = "Rules"; break;
 		case QUERIES: actual = "Queries"; break;
 		case ID: 
 			cout << "ERROR: Matcher Automaton Improperly Requested";
