@@ -24,11 +24,13 @@ int main(int argc, char* argv[])
             input >> read;
             if (input.peek() != EOF)
             {
-                file = file + read += input.get();
+                file = file + read;
+                file = file += input.get();
             }
             else 
             {
-                file = file + read += EOF;
+                file = file + read;
+                file = file += EOF;
             }
         }
         cout << file << '\n';
