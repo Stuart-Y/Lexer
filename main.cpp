@@ -19,7 +19,7 @@ int main(int argc, char* argv[])
     }
     else
     {
-        while (!input.eof())
+       /* while (!input.eof())
         {
             input >> read;
             if (input.peek() != EOF)
@@ -32,6 +32,10 @@ int main(int argc, char* argv[])
                 file = file + read;
                 file = file += EOF;
             }
+        }*/
+        for (int i = 0; input.peek() != EOF; i++)
+        {
+            file = file += input.get();
         }
         cout << file << '\n';
     }
