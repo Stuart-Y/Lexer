@@ -85,7 +85,7 @@ public:
 				input = input.substr(1, input.length());
 			}
 		}
-		tokens.push_back(endfile->CreateToken("endf", lineNumber));
+		tokens.push_back(endfile->CreateToken("", lineNumber));
 		return tokens;
 	}
 };

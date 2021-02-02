@@ -18,10 +18,15 @@ public:
         {
             bool cycle = true;
             maxReadCount = 1;
+            maxLines = 0;
             element = "'";
             for (unsigned int i = 1; cycle && i < input.length(); i++)
             {
                 element = element + input[i];
+                if (input[i] == '\n')
+                {
+                    maxLines++;
+                }
                 if (input[i] == '\'')
                 {
                     if (input[i + 1] != '\'')
