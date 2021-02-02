@@ -7,6 +7,7 @@
 #include "StringAutomaton.h"
 #include "CommentAutomaton.h"
 #include "IDAutomaton.h"
+#include "UndefinedAutomaton.h"
 using namespace std;
 
 class Lexer
@@ -38,6 +39,7 @@ public:
 		automata.push_back(new StringAutomaton(STRING));
 		automata.push_back(new CommentAutomaton(COMMENT));
 		automata.push_back(new IDAutomaton(ID));
+		automata.push_back(new UndefinedAutomaton(UNDEFINED));
 	}
 };
 
