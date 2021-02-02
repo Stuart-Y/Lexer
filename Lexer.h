@@ -39,7 +39,34 @@ public:
 		automata.push_back(new StringAutomaton(STRING));
 		automata.push_back(new CommentAutomaton(COMMENT));
 		automata.push_back(new IDAutomaton(ID));
+		automata.push_back(new MatcherAutomaton(ENDFILE));
 		automata.push_back(new UndefinedAutomaton(UNDEFINED));
+	}
+
+	vector <Token*> Run(string input)
+	{
+		int maxRead;
+		int check;
+		int lineNumber = 1;
+		Automaton* maxAutomaton = automata[0];
+		Token* newToken;
+		while (input.size() > 0)
+		{
+			for (unsigned int i = 0; i < automata.size(); i++)
+			{
+				maxRead = 0;
+				check = automata[i]->Start(input, lineNumber);
+				if (check > maxRead)
+				{
+					maxRead = check;
+					maxAutomaton = automata[i];
+				}
+				newToken = maxAutomaton->CreateToken(input.substr(0,maxRead) /*modify to give substring*/,lineNumber);
+				tokens.push_back(newToken);
+				lineNumber += maxAutomaton->NewLinesRead();
+			}
+		}
+		return tokens;
 	}
 };
 
