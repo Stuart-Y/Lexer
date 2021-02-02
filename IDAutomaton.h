@@ -1,5 +1,6 @@
 #pragma once
 #include <cctype>
+#include <string>
 #include "Automaton.h"
 
 class IDAutomaton :
@@ -16,7 +17,7 @@ public:
     {
        if (isalpha(input[0]))
         {
-           for (unsigned int i = 0; isupper(input[i]) || islower(input[i]); i++)
+           for (unsigned int i = 0; isalpha(input[i]) && input[i]; i++)
            {
                maxReadCount++;
            }
