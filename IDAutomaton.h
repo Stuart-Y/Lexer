@@ -13,12 +13,12 @@ public:
 
     int Start(string input, int lineNumber)
     {
-       if (isalpha(input[0]))
+       if (isalpha(input[0]) == true)
         {
-           cout << isalpha(input[0]) << '\n';
-           for (unsigned int i = 0; isalpha(input[i]); i++)
+           cout << isalpha(input[0] == true) << '\n';
+           for (unsigned int i = 0; isalpha(input[i]) == true; i++)
            {
-               cout << isalpha(input[i]) << '\n';
+               cout << isalpha(input[i] == true) << '\n';
                maxReadCount++;
            }
            return maxReadCount;
