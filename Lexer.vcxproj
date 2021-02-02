@@ -77,6 +77,7 @@
   <ItemGroup>
     <ClCompile Include="Automaton.cpp" />
     <ClCompile Include="CommentAutomaton.cpp" />
+    <ClCompile Include="EndFileAutomaton.cpp" />
     <ClCompile Include="IDAutomaton.cpp" />
     <ClCompile Include="Lexer.cpp" />
     <ClCompile Include="main.cpp" />
@@ -88,6 +89,7 @@
   <ItemGroup>
     <ClInclude Include="Automaton.h" />
     <ClInclude Include="CommentAutomaton.h" />
+    <ClInclude Include="EndFileAutomaton.h" />
     <ClInclude Include="IDAutomaton.h" />
     <ClInclude Include="Lexer.h" />
     <ClInclude Include="MatcherAutomaton.h" />

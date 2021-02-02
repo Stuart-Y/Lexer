@@ -8,6 +8,7 @@
 #include "CommentAutomaton.h"
 #include "IDAutomaton.h"
 #include "UndefinedAutomaton.h"
+#include "EndFileAutomaton.h"
 using namespace std;
 
 class Lexer
@@ -39,7 +40,6 @@ public:
 		automata.push_back(new StringAutomaton(STRING));
 		automata.push_back(new CommentAutomaton(COMMENT));
 		automata.push_back(new IDAutomaton(ID));
-		automata.push_back(new MatcherAutomaton(ENDFILE));
 		automata.push_back(new UndefinedAutomaton(UNDEFINED));
 	}
 
@@ -49,6 +49,7 @@ public:
 		int check;
 		int lineNumber = 1;
 		Automaton* maxAutomaton = automata[0];
+		Automaton* endfile = new EndFileAutomaton(ENDFILE);
 		Token* newToken;
 		while (input.size() > 0)
 		{
@@ -66,6 +67,7 @@ public:
 				lineNumber += maxAutomaton->NewLinesRead();
 			}
 		}
+		tokens.push_back(endfile->CreateToken("endf", lineNumber));
 		return tokens;
 	}
 };
