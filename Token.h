@@ -50,7 +50,7 @@ public:
 	string toString()
 	{
 		string out;
-		out = "(" + tokenTypeToString(type) + "," + input + "," + to_string(lineNumber) + ")";
+		out = "(" + tokenTypeToString(type) + "," + input + "," + to_string(lineNumber) + ")" + '\n';
 		return out;
 	}
 };
