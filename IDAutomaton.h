@@ -16,10 +16,10 @@ public:
         maxReadCount = 0;
        if (isalpha(input[0]) == 0)
         {
-           cout << isalpha(input[0]) << '\n';
+           cout << isalpha(input[0]) << "if" << '\n';
            for (unsigned int i = 0; isalpha(input[i]) == 0; i++)
            {
-               cout << isalpha(input[i]) << '\n';
+               cout << isalpha(input[i]) << "for" << '\n';
                maxReadCount++;
            }
            return maxReadCount;

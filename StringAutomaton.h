@@ -29,7 +29,6 @@ public:
                         cycle = false;
                     }
                 }
-
             }
             return element.length();
         }
