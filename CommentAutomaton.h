@@ -21,7 +21,7 @@ public:
         else if (input[0] == '#')
         {
             maxReadCount++;
-            if (input[1] == '|')
+            /*if (input[1] == '|')
             {
                 maxReadCount++;
                 bool cycle = true;
@@ -38,7 +38,7 @@ public:
                     }
                 }
             }
-            else {
+            else {*/
                 for (unsigned int i = 1; input[i] != '\n' && i < input.length(); i++)
                 {
                     maxReadCount++;
@@ -48,7 +48,7 @@ public:
                     maxLines = lineNumber++;
                 }
                 return maxReadCount;
-            }
+            //}
         }
         return 0;
     }
