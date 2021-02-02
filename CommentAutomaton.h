@@ -13,6 +13,7 @@ public:
 
     int Start(string input, int lineNumber)
     {
+        maxReadCount = 0;
         if (type != COMMENT)
         {
             cout << "ERROR: Comment Automaton Improperly Requested";
