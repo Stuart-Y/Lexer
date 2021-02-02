@@ -46,7 +46,7 @@ public:
                 }
                 if (input[maxReadCount] == '\n')
                 {
-                    maxLines = lineNumber++;
+                    maxLines++;
                 }
                 return maxReadCount;
             //}
