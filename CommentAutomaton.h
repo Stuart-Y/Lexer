@@ -28,6 +28,10 @@ public:
                 for (unsigned int i = 2; i < input.length() && cycle; i++)
                 {
                     maxReadCount++;
+                    if (input[i] == '\n')
+                    {
+                        maxLines++;
+                    }
                     if (input[i] == '|')
                     {
                         if (input[i + 1] == '#')
