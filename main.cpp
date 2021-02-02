@@ -25,7 +25,6 @@ int main(int argc, char* argv[])
         {
             file = file += input.get();
         }
-        cout << file << '\n';
     }
     input.close();
     Lexer read;

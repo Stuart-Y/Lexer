@@ -45,8 +45,7 @@ public:
 	{
 		if (input.length() >= actual.length())
 		{
-			string check = input.substr(0, actual.length());
-			cout << actual << '\n';
+			string check = input.substr(0, 1);
 			cout << check << '\n';
 			cout << check.compare(actual);
 			if (check.compare(actual) == 0)
