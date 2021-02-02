@@ -14,6 +14,7 @@ public:
 
     int Start(string input, int lineNumber)
     {
+        cout << isalpha(input[0]);
        if (isalpha(input[0]))
         {
            element = input[0];
