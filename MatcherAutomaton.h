@@ -45,12 +45,12 @@ public:
 	{
 		if (input.length() >= actual.length())
 		{
-			string check = input.substr(0, 1);
+			string check = input.substr(0, actual.size());
 			cout << check << '\n';
 			cout << check.compare(actual);
 			if (check.compare(actual) == 0)
 			{
-				return 1;
+				return actual.size();
 			}
 		}
 		return 0;
