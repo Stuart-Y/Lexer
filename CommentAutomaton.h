@@ -38,15 +38,17 @@ public:
                     }
                 }
             }
-            for (unsigned int i = 1; input[i] != '\n' && i < input.length(); i++)
-            {
-                maxReadCount++;
+            else {
+                for (unsigned int i = 1; input[i] != '\n' && i < input.length(); i++)
+                {
+                    maxReadCount++;
+                }
+                if (input[maxReadCount] == '\n')
+                {
+                    maxLines = lineNumber++;
+                }
+                return maxReadCount;
             }
-            if (input[maxReadCount] == '\n')
-            {
-                maxLines = lineNumber++;
-            }
-            return maxReadCount;
         }
         return 0;
     }
