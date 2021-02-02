@@ -22,7 +22,7 @@ public:
                element = element + input[i];
                maxReadCount++;
            }
-           if (isspace(input[maxReadCount-1]))
+           if (isspace(input[maxReadCount]))
            {
                return maxReadCount;
            }
