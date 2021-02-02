@@ -51,7 +51,7 @@ public:
 		Automaton* maxAutomaton = automata[0];
 		Automaton* endfile = new EndFileAutomaton(ENDFILE);
 		Token* newToken;
-		while (input.size() > 0)
+		while (input.empty() != true)
 		{
 			for (unsigned int i = 0; i < automata.size(); i++)
 			{
@@ -62,9 +62,14 @@ public:
 					maxRead = check;
 					maxAutomaton = automata[i];
 				}
-				newToken = maxAutomaton->CreateToken(input.substr(0,maxRead) /*modify to give substring*/,lineNumber);
+				newToken = maxAutomaton->CreateToken(input.substr(0,maxRead), lineNumber);
 				tokens.push_back(newToken);
 				lineNumber += maxAutomaton->NewLinesRead();
+				input.erase(0, maxRead);
+				if (input[0] == '\t' || input[0] == '\n' || input[0] == ' ')
+				{
+					input.erase(0, 1);
+				}
 			}
 		}
 		tokens.push_back(endfile->CreateToken("endf", lineNumber));
