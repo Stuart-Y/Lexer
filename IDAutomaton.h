@@ -13,6 +13,7 @@ public:
 
     int Start(string input, int lineNumber)
     {
+        maxReadCount = 0;
        if (isalpha(input[0]) == 0)
         {
            cout << isalpha(input[0]) << '\n';
