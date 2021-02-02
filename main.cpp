@@ -9,7 +9,6 @@ int main(int argc, char* argv[])
 {
     string fileName = argv[1];
     ifstream input;
-    string read;
     string file;
 
     input.open(fileName);
@@ -27,6 +26,6 @@ int main(int argc, char* argv[])
         cout << file << '\n';
     }
     input.close();
-    Lexer read = Lexer();
+    Lexer read;
     return 0;
 }
