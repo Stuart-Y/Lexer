@@ -43,7 +43,6 @@ public:
 
 	int Start(string input, int lineNumber)
 	{
-		maxLines = lineNumber;
 		if (input.length() >= actual.length())
 		{
 			for (unsigned int i = 0; i < actual.length(); i++)
@@ -58,7 +57,7 @@ public:
 		return 0;
 	}
 
-	int newLinesRead() const {
+	int NewLinesRead() const {
 		return 0;
 	}
 };

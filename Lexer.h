@@ -73,7 +73,7 @@ public:
 				}
 				newToken = maxAutomaton->CreateToken(input.substr(0,maxRead), lineNumber);
 				tokens.push_back(newToken);
-				lineNumber += maxAutomaton->NewLinesRead();
+				lineNumber = lineNumber + maxAutomaton->NewLinesRead();
 				input.erase(0, maxRead);
 			}
 		}
