@@ -45,14 +45,11 @@ public:
 	{
 		if (input.length() >= actual.length())
 		{
-			for (unsigned int i = 0; i < actual.length(); i++)
+			string check = input.substr(0, actual.length());
+			if (check.compare(actual))
 			{
-				if (input[i] != actual[i])
-				{
-					return 0;
-				}
+				return actual.length();
 			}
-			return actual.length();
 		}
 		return 0;
 	}
