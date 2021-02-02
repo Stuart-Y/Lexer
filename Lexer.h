@@ -53,8 +53,16 @@ public:
 		Token* newToken;
 		while (input.empty() != true)
 		{
+			while (input[0] == '\t' || input[0] == '\n' || input[0] == ' ')
+			{
+				input.erase(0, 1);
+			}
 			for (unsigned int i = 0; i < automata.size(); i++)
 			{
+				while (input[0] == '\t' || input[0] == '\n' || input[0] == ' ')
+				{
+					input.erase(0, 1);
+				}
 				maxRead = 0;
 				check = automata[i]->Start(input, lineNumber);
 				if (check > maxRead)
@@ -66,10 +74,6 @@ public:
 				tokens.push_back(newToken);
 				lineNumber += maxAutomaton->NewLinesRead();
 				input.erase(0, maxRead);
-				if (input[0] == '\t' || input[0] == '\n' || input[0] == ' ')
-				{
-					input.erase(0, 1);
-				}
 			}
 		}
 		tokens.push_back(endfile->CreateToken("endf", lineNumber));
