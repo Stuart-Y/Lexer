@@ -33,6 +33,6 @@ int main(int argc, char* argv[])
     {
         cout << out[i]->toString();
     }
-    cout << "Total Tokens = " << out.size() + 1;
+    cout << "Total Tokens = " << out.size() << '\n';
     return 0;
 }
