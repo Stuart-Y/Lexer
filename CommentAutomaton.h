@@ -3,8 +3,6 @@
 class CommentAutomaton :
     public Automaton
 {
-private:
-
 public:
     CommentAutomaton(TokenType type)
     {
@@ -40,10 +38,11 @@ public:
                 }
             }
             else {
-                for (unsigned int i = 1; input[i] != '\n' && i < input.length(); i++)
+                for (unsigned int j = 1; input[i] != '\n' && i < input.length(); i++)
                 {
                     maxReadCount++;
                 }
+                maxReadCount--;
                 return maxReadCount;
             }
         }
