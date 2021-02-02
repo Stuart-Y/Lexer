@@ -20,10 +20,10 @@ private:
 public:
 	Lexer()
 	{
-		vector<Token*> token();
-		tokens = token();
-		vector<Automaton*> automatons();
-		automata = automatons();
+		vector<Token*> token;
+		tokens = token;
+		vector<Automaton*> automatons;
+		automata = automatons;
 		automata.push_back(new MatcherAutomaton(COMMA));
 		automata.push_back(new MatcherAutomaton(PERIOD));
 		automata.push_back(new MatcherAutomaton(Q_MARK));
