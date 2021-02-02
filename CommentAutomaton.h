@@ -4,7 +4,6 @@ class CommentAutomaton :
     public Automaton
 {
 private:
-    string element;
 
 public:
     CommentAutomaton(TokenType type)
@@ -21,11 +20,27 @@ public:
         }
         else if (input[0] == '#')
         {
-            element = "#";
+            maxReadCount++;
+            if (input[1] == '|')
+            {
+                maxReadCount++;
+                bool cycle = true;
+                for (unsigned int i = 2; i < input.length() && cycle; i++)
+                {
+                    maxReadCount++;
+                    if (input[i] == '|')
+                    {
+                        if (input[i + 1] == '#')
+                        {
+                            cycle = false;
+                            maxReadCount++;
+                        }
+                    }
+                }
+            }
             for (unsigned int i = 1; input[i] != '\n' && i < input.length(); i++)
             {
-                maxReadCount = i;
-                element = element + input[i];
+                maxReadCount++;
             }
             if (input[maxReadCount] == '\n')
             {
