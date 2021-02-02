@@ -17,13 +17,12 @@ public:
        if (isalpha(input[0]))
         {
            element = input[0];
-           maxReadCount = 1;
            for (unsigned int i = 0; isalnum(input[i]) && i < input.length(); i++)
            {
                element = element + input[i];
                maxReadCount++;
            }
-           if (input[maxReadCount] == ' ' || input[maxReadCount] == '\t' || input[maxReadCount] == '\n')
+           if (isspace(input[maxReadCount+1]))
            {
                return maxReadCount;
            }
