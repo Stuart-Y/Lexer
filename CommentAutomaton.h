@@ -19,7 +19,7 @@ public:
         }
         else if (input[0] == '#')
         {
-            cout << input[1];
+            cout << input[1] << '\n';
             maxReadCount++;
             if (input[1] == '|')
             {
