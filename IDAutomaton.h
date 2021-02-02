@@ -16,7 +16,7 @@ public:
     {
        if (isalpha(input[0]))
         {
-           for (unsigned int i = 0; std::isalpha(input[i]) && !(isspace(input[i]) || input[i] == '('); i++)
+           for (unsigned int i = 0; isupper(input[i]) || islower(input[i]); i++)
            {
                maxReadCount++;
            }
