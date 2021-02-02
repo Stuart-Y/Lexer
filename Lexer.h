@@ -54,17 +54,17 @@ public:
 		Token* newToken;
 		while (input.empty() != true)
 		{
-			while (isspace(input[0]) == true)
-			{
-				input.erase(0, 1);
-			}
 			maxRead = 0;
-			for (unsigned int i = 0; i < automata.size(); i++)
+			while (isspace(input[0]))
 			{
-				while (isspace(input[0]) == true)
+				if (input[0] == '\n')
 				{
-					input.erase(0, 1);
+					lineNumber++;
 				}
+				input = input.substr(1, input.length());
+			}
+			for (unsigned int i = 0; i < automata.size(); i++)
+			{	
 				check = automata[i]->Start(input, lineNumber);
 				if (check > maxRead)
 				{
