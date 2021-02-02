@@ -29,9 +29,10 @@ public:
                 }
                 if (input[i] == '\'')
                 {
+                    cycle = false;
                     if (input[i + 1] != '\'')
                     {
-                        cycle = false;
+                        cycle = true;
                     }
                 }
             }
