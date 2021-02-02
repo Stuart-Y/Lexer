@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include<string>
+#include "Lexer.h"
 
 using namespace std;
 
@@ -26,5 +27,6 @@ int main(int argc, char* argv[])
         cout << file << '\n';
     }
     input.close();
+    Lexer read = Lexer();
     return 0;
 }
