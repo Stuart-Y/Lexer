@@ -19,7 +19,7 @@ public:
             bool cycle = true;
             maxReadCount = 1;
             element = "'";
-            for (unsigned int i = 0; cycle && i < input.length(); i++)
+            for (unsigned int i = 1; cycle && i < input.length(); i++)
             {
                 element = element + input[i];
                 if (input[i] == '\'')
