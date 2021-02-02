@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <vector>
+#include <cctype>
 #include "Token.h"
 #include "Automaton.h"
 #include "MatcherAutomaton.h"
@@ -53,13 +54,13 @@ public:
 		Token* newToken;
 		while (input.empty() != true)
 		{
-			while (input[0] == '\t' || input[0] == '\n' || input[0] == ' ')
+			while (isspace(input[0]) == true)
 			{
 				input.erase(0, 1);
 			}
 			for (unsigned int i = 0; i < automata.size(); i++)
 			{
-				while (input[0] == '\t' || input[0] == '\n' || input[0] == ' ')
+				while (isspace(input[0]) == true)
 				{
 					input.erase(0, 1);
 				}
