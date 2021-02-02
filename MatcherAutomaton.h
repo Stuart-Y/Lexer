@@ -50,7 +50,7 @@ public:
 			cout << check.compare(actual);
 			if (check.compare(actual) == 0)
 			{
-				return actual.length();
+				return 1;
 			}
 		}
 		return 0;
