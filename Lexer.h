@@ -76,6 +76,14 @@ public:
 			tokens.push_back(newToken);
 			lineNumber = lineNumber + maxAutomaton->NewLinesRead();
 			input.erase(0, maxRead);
+			while (isspace(input[0]))
+			{
+				if (input[0] == '\n')
+				{
+					lineNumber++;
+				}
+				input = input.substr(1, input.length());
+			}
 		}
 		tokens.push_back(endfile->CreateToken("endf", lineNumber));
 		return tokens;
