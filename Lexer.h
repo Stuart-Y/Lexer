@@ -52,7 +52,7 @@ public:
 		Automaton* maxAutomaton = automata[0];
 		Automaton* endfile = new EndFileAutomaton(ENDFILE);
 		Token* newToken;
-		while (input.empty() != true && input[0] != EOF)
+		while (input.empty() != true && input.length() > 1)
 		{
 			maxRead = 0;
 			while (isspace(input[0]))
