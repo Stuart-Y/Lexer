@@ -1,11 +1,11 @@
 #pragma once
 #include <cctype>
 #include "Automaton.h"
+
 class IDAutomaton :
     public Automaton
 {
 private:
-    string element;
 public:
     IDAutomaton(TokenType type)
     {
@@ -14,20 +14,13 @@ public:
 
     int Start(string input, int lineNumber)
     {
-        element = "";
-       if (isalpha(input[0]) && !(input[0] == ':'|| input[0] == '('))
+       if (isalpha(input[0]))
         {
-           element = input[0];
-           for (unsigned int i = 0; isalnum(input[i]) && i < input.length() && !(isspace(input[i])); i++)
+           for (unsigned int i = 0; isalpha(input[i]); i++)
            {
-               element = element + input[i];
                maxReadCount++;
            }
-           if (isspace(input[maxReadCount]))
-           {
-               return maxReadCount;
-           }
-           return 0;
+           return maxReadCount;
         }
         return 0;
     }
