@@ -18,10 +18,8 @@ public:
         {
            for (unsigned int i = 0; isalpha(input[i]) != 0; i++)
            {
-               cout << input[i];
                maxReadCount++;
            }
-           cout << maxReadCount << '\n';
            return maxReadCount;
         }
         return 0;
