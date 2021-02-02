@@ -14,6 +14,7 @@ public:
 
     int Start(string input, int lineNumber)
     {
+        element = "";
        if (isalpha(input[0]) && !(input[0] == ':'|| input[0] == '('))
         {
            element = input[0];
