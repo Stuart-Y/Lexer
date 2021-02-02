@@ -30,7 +30,7 @@ int main(int argc, char* argv[])
     input.close();
     Lexer read;
     out = read.Run(file);
-    for (int i = 0; i < out.size(); i++)
+    for (unsigned int i = 0; i < out.size(); i++)
     {
         cout << out[i]->toString();
     }
