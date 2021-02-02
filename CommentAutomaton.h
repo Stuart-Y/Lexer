@@ -38,7 +38,7 @@ public:
                 }
             }
             else {
-                for (unsigned int j = 1; input[i] != '\n' && i < input.length(); i++)
+                for (unsigned int j = 1; input[j] != '\n' && j < input.length(); j++)
                 {
                     maxReadCount++;
                 }
