@@ -22,6 +22,7 @@ public:
                cout << isalpha(input[i]) << "for" << '\n';
                maxReadCount++;
            }
+           cout << maxReadCount << '\n';
            return maxReadCount;
         }
         return 0;
