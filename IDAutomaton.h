@@ -14,8 +14,7 @@ public:
 
     int Start(string input, int lineNumber)
     {
-        cout << isalpha(input[0])<< '\n';
-       if (isalpha(input[0]) && !(input[0] == ':'))
+       if (isalpha(input[0]) && !(input[0] == ':'|| input[0] == '('))
         {
            element = input[0];
            for (unsigned int i = 0; isalnum(input[i]) && i < input.length() && !(isspace(input[i])); i++)
@@ -23,7 +22,7 @@ public:
                element = element + input[i];
                maxReadCount++;
            }
-           if (isspace(input[maxReadCount]))
+           if (isspace(input[maxReadCount-1]))
            {
                return maxReadCount;
            }
