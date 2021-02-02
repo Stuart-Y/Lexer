@@ -71,11 +71,11 @@ public:
 					maxRead = check;
 					maxAutomaton = automata[i];
 				}
-				newToken = maxAutomaton->CreateToken(input.substr(0,maxRead), lineNumber);
-				tokens.push_back(newToken);
-				lineNumber = lineNumber + maxAutomaton->NewLinesRead();
-				input.erase(0, maxRead);
 			}
+			newToken = maxAutomaton->CreateToken(input.substr(0, maxRead), lineNumber);
+			tokens.push_back(newToken);
+			lineNumber = lineNumber + maxAutomaton->NewLinesRead();
+			input.erase(0, maxRead);
 		}
 		tokens.push_back(endfile->CreateToken("endf", lineNumber));
 		return tokens;
