@@ -46,8 +46,6 @@ public:
 		if (input.length() >= actual.length())
 		{
 			string check = input.substr(0, actual.size());
-			cout << check << '\n';
-			cout << check.compare(actual);
 			if (check.compare(actual) == 0)
 			{
 				return actual.size();
