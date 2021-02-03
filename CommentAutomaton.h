@@ -37,7 +37,7 @@ public:
                         {
                             cycle = false;
                             maxReadCount++;
-                            maxLine++;
+                            maxLines++;
                         }
                     }
                 }
