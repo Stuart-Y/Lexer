@@ -36,14 +36,14 @@ public:
                         if (input[i + 1] == '#')
                         {
                             cycle = false;
-                            maxReadCount++;
+                            maxReadCount++;d
                         }
                     }
                 }
                 return maxReadCount;
             }
             else {
-                for (unsigned int j = 1; input[j] != '\n' && j < input.length(); j++)
+                for (unsigned int j = 0; input[j] != '\n' && j < input.length(); j++)
                 {
                     maxReadCount++;
                 }
