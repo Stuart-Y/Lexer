@@ -23,6 +23,11 @@ public:
             for (unsigned int i = 1; cycle && i < input.length(); i++)
             {
                 element = element + input[i];
+                if (input.length() - i <= 1)
+                {
+                    type = UNDEFINED;
+                    return element.length();
+                }
                 if (input[i] == '\n')
                 {
                     maxLines++;
