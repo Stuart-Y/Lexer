@@ -18,6 +18,7 @@ public:
             return 0;
         }
         else if (input[0] == '#')
+        {
             if (input[1] == '|')
             {
                 maxReadCount++;
