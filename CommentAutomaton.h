@@ -19,13 +19,12 @@ public:
         }
         else if (input[0] == '#')
         {
-            cout << input[1] << '\n';
-            maxReadCount++;
             if (input[1] == '|')
             {
                 maxReadCount++;
+                maxReadCount++;
                 bool cycle = true;
-                for (unsigned int i = 2; i < input.length() && cycle; i++)
+                for (unsigned int i = 0; i < input.length() && cycle; i++)
                 {
                     maxReadCount++;
                     if (input[i] == '\n')
@@ -37,7 +36,6 @@ public:
                         if (input[i + 1] == '#')
                         {
                             cycle = false;
-                            maxReadCount++;
                         }
                     }
                 }
@@ -48,7 +46,6 @@ public:
                 {
                     maxReadCount++;
                 }
-                maxReadCount--;
                 return maxReadCount;
             }
         }
