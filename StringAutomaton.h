@@ -39,10 +39,8 @@ public:
                     if (input[i + 1] == '\'')
                     {
                         cycle = true;
-                    }
-                    else if (input[i-1] == '\'')
-                    {
-                        cycle = true;
+                        i++;
+                        element = element + input[i];
                     }
                 }
             }
