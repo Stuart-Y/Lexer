@@ -17,9 +17,8 @@ public:
             cout << "ERROR: Comment Automaton Improperly Requested";
             return 0;
         }
-        else if (input[0] == '#')
+        if (input[0] == '#')
         {
-            maxReadCount++;
             if (input[1] == '|')
             {
                 maxReadCount++;
@@ -36,18 +35,16 @@ public:
                         if (input[i + 1] == '#')
                         {
                             cycle = false;
-                            maxReadCount++;
                         }
                     }
                 }
                 return maxReadCount;
             }
             else {
-                for (unsigned int j = 1; input[j] != '\n' && j < input.length(); j++)
+                for (unsigned int j = 0; input[j] != '\n' && j < input.length(); j++)
                 {
                     maxReadCount++;
                 }
-                maxReadCount--;
                 return maxReadCount;
             }
         }
