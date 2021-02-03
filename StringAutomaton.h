@@ -26,6 +26,7 @@ public:
                 if (input.length() - i <= 1)
                 {
                     type = UNDEFINED;
+                    maxLines++;
                     return element.length();
                 }
                 if (input[i] == '\n')
