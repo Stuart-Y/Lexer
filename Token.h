@@ -14,6 +14,7 @@ private:
 	string input;
 	int lineNumber;
 	TokenType type;
+	
 	string tokenTypeToString(TokenType token)
 	{
 		switch (token) 
@@ -52,6 +53,11 @@ public:
 		string out;
 		out = "(" + tokenTypeToString(type) + "," + '"' + input + '"'+  "," + to_string(lineNumber) + ")" + '\n';
 		return out;
+	}
+	
+	TokenType getType()
+	{
+		return type;
 	}
 };
 
